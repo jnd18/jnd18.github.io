@@ -16,3 +16,7 @@ When I'm not reading or coding, I enjoy rock climbing.
 ### Contact me
 
 [jnd71@zips.uakron.edu](mailto:jnd71@zips.uakron.edu)
+
+### Site information
+
+This website was built using [Jekyll Now.](https://github.com/barryclark/jekyll-now)
