@@ -4,12 +4,15 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+I'm Jonathan Dorsey, a statistics graduate student at the University of Akron. 
+Currently I'm working on my master's thesis and looking for work as a data scientist or analyst.
+I went to Case Western Reserve University as an undergraduate and majored in math.
 
-### More Information
+I'm always learning more about math, statistics, and programming. 
+And of course, [I'm interested in most phases of data processing.](https://youtu.be/0bomkgXeDkE?t=213)
 
-A place to include any other types of information that you'd like to include about yourself.
+When I'm not reading or coding, I enjoy rock climbing.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[jnd71@zips.uakron.edu](mailto:jnd71@zips.uakron.edu)
