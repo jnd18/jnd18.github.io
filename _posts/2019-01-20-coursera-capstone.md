@@ -3,7 +3,9 @@ layout: post
 title:  "Looking Back on the Coursera Data Science Specialization"
 ---
 
-It's been around six months since I completed the Data Science specialization on Coursera, so I decided to take a look back on some of the work I did. My vague recollection was that my work was rushed and sloppy. This was in part because I was relatively new to R, but mainly because the specialization uses a subscription-based payment model, and I was determined to finish it in just a couple months, so I didn't have to pay too much. It also didn't help that as I progressed through the specialization, I was growing frustrated that the courses seemed more and more abandoned: it was clear the materials hadn't been updated in years despite numerous obvious errors, and it was difficult to find help. 
+It's been around six months since I completed the Data Science specialization on Coursera, so I decided to take a look back on some of the work I did. 
+
+My vague recollection was that my work was rushed and sloppy. This was in part because I was relatively new to R, but mainly because the specialization uses a subscription-based payment model, and I was determined to finish it in just a couple months, so I didn't have to pay too much. It also didn't help that as I progressed through the specialization, I was growing frustrated that the courses seemed more and more abandoned: it was clear the materials hadn't been updated in years despite numerous obvious errors, and it was difficult to find help. 
 
 Anyway, that's enough negativity. Despite my frustrations, I don't regret paying for and completing the specialization at all. It provided the exercise and consistent structure I needed to help me develop my R skills quickly. It also emphasized maintaining a reproducible workflow, which I now find invaluable. And looking back on my work, I found that some of it was pretty neat. 
 
