@@ -10,13 +10,15 @@ The [babynames](https://github.com/hadley/babynames) package/dataset is a great 
 According to the link above, the `babynames` dataset contains: "For each year from 1880 to 2017, the number of children of each sex given each name. All names with more than 5 uses are given." (Actually all names with more than 4 uses are given.) The data comes from the US Social Security Administration. First, let's just get a feel for the data.
 
 
-```r
+{% highlight r %}
 library(babynames)
 suppressMessages(library(tidyverse))
 head(babynames)
-```
+{% endhighlight %}
 
-```
+
+
+{% highlight text %}
 ## # A tibble: 6 x 5
 ##    year sex   name          n   prop
 ##   <dbl> <chr> <chr>     <int>  <dbl>
@@ -26,7 +28,7 @@ head(babynames)
 ## 4  1880 F     Elizabeth  1939 0.0199
 ## 5  1880 F     Minnie     1746 0.0179
 ## 6  1880 F     Margaret   1578 0.0162
-```
+{% endhighlight %}
 
 Above, we can see the first few rows of the data. The `year`, `sex`, and `name` columns are self-explanatory. The `n` column records how many people had that name and sex in that year. The `prop` column is the proportion of people who had that name for the given year and sex. Since the data only contains names with more than 4 uses (per year and sex), the prop column does not sum to 1 (over a given year and sex). So we can see from the first row that of the girls born in 1880, 7065 were named Mary, which was about 7% of the female population born that year.
 
@@ -35,7 +37,7 @@ Above, we can see the first few rows of the data. The `year`, `sex`, and `name` 
 Now, let's answer some questions. Let's find out which names were ever the most popular for a given year and sex, and how many times they were the most popular.
 
 
-```r
+{% highlight r %}
 babynames %>%
     filter(sex == "F") %>%
     group_by(year) %>%
@@ -43,9 +45,11 @@ babynames %>%
     ungroup() %>%
     count(name) %>%
     arrange(desc(nn))
-```
+{% endhighlight %}
 
-```
+
+
+{% highlight text %}
 ## # A tibble: 10 x 2
 ##    name        nn
 ##    <chr>    <int>
@@ -59,12 +63,12 @@ babynames %>%
 ##  8 Sophia       3
 ##  9 Ashley       2
 ## 10 Isabella     2
-```
+{% endhighlight %}
 
 Here we have our answer for the girl's names. Mary was the top name for 76 years! The second most frequent top name is Jennifer, with only 15 years. Emily is close behind at 12 years as a top name. Let's do the boy's names now.
 
 
-```r
+{% highlight r %}
 babynames %>%
     filter(sex == "M") %>%
     group_by(year) %>%
@@ -72,9 +76,11 @@ babynames %>%
     ungroup() %>%
     count(name) %>%
     arrange(desc(nn))
-```
+{% endhighlight %}
 
-```
+
+
+{% highlight text %}
 ## # A tibble: 8 x 2
 ##   name       nn
 ##   <chr>   <int>
@@ -86,19 +92,19 @@ babynames %>%
 ## 6 Noah        4
 ## 7 David       1
 ## 8 Liam        1
-```
+{% endhighlight %}
 
 In this case, John and Michael are tied for the no. 1 spot with 44 years each. That's pretty interesting. I wonder if they went back and forth, or if each name had a distinct reign. Let's find out!
 
 
-```r
+{% highlight r %}
 babynames %>%
     filter(sex == "M", name %in% c("John", "Michael")) %>%
     ggplot(aes(year, prop, color = name)) +
     geom_line()
-```
+{% endhighlight %}
 
-![](babynames_post_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+![testing](/blog/figs/babynames_post/unnamed-chunk-42-1.png)
 
 Above, I've plotted the proportion of boys named John and Michael over time. We can see that John has been on a fairly steady decline, while Michael had a meteoric rise beginning some time in the 1930s, overtook John in popularity around 1950, and then started to decline around 1970. So it was definitely two distinct reigns.
 
@@ -163,7 +169,7 @@ Now, $H(X|Y=1)$ is just the entropy of the renormalized `prop` column. $P(Y=1)$ 
 Now we can finally compute and graph the entropy!
 
 
-```r
+{% highlight r %}
 # computes entropy of p where p is a normalized probability vector with no zero entries
 entropy <- function(p) {
     -sum(p * log2(p))
@@ -184,9 +190,9 @@ entropy_babynames %>%
     ggplot(aes(x = year)) +
     geom_ribbon(aes(ymin = entropy_lb, ymax = entropy_ub, group = sex), fill = "grey70") +
     geom_line(aes(y = entropy, color = sex))
-```
+{% endhighlight %}
 
-![](babynames_post_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
+![testing](/blog/figs/babynames_post/unnamed-chunk-43-1.png)
 
 Above I've plotted the entropy by year and sex. The colored line is the midpoint of the upper and lower bounds, which are represented by the light grey ribbon. We can see right away that the bound are very tight. We can also see that girl's names tend to have more entropy than boy's names, but they track each other fairly closely. Both were increasing steadily until around 1920, at which point the entropy levels off and falls until around 1950, when it starts to rise very quickly. This could be due to the effects of the World Wars on the US birthrate. There's another small dip in the 1980s, and then a continued increase, though it looks like the name entropy for girls may be leveling off again. 
 
@@ -195,23 +201,23 @@ As for interpreting the general scale, the entropies we see here are roughly 10 
 Lastly, let's see how far off the naive estimates of entropy are. In the first graph, we have the good estimates with the shaded bounds, and the estimate we get from computing the entropy on the unnormalized `prop` column. In the second graph, we computed the entropy by normalizing the `prop` column, but otherwise ignoring the missing people. The second estimate is clearly better, but neither is particularly good.
 
 
-```r
+{% highlight r %}
 entropy_babynames %>%
     ggplot(aes(x = year)) +
     geom_ribbon(aes(ymin = entropy_lb, ymax = entropy_ub, group = sex), fill = "grey70") +
     geom_line(aes(y = entropy, color = sex)) +
     geom_line(aes(y = false_entropy1, color = sex))
-```
+{% endhighlight %}
 
-![](babynames_post_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
+![testing](/blog/figs/babynames_post/unnamed-chunk-44-1.png)
 
 
-```r
+{% highlight r %}
 entropy_babynames %>%
     ggplot(aes(x = year)) +
     geom_ribbon(aes(ymin = entropy_lb, ymax = entropy_ub, group = sex), fill = "grey70") +
     geom_line(aes(y = entropy, color = sex)) +
     geom_line(aes(y = false_entropy2, color = sex))
-```
+{% endhighlight %}
 
-![](babynames_post_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
+![testing](/blog/figs/babynames_post/unnamed-chunk-45-1.png)
