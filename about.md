@@ -15,7 +15,7 @@ When I'm not reading or coding, I enjoy rock climbing.
 
 ### Contact me
 
-[jnd71@zips.uakron.edu](mailto:jnd71@zips.uakron.edu)
+[jndorsey@protonmail.ch](mailto:jndorsey@protonmail.ch)
 
 ### Site information
 
