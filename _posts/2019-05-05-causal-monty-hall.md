@@ -40,7 +40,7 @@ This reasoning is correct if the host always opens a door with a goat behind it.
 If the host opens a door completely at random (potentially revealing the car), then there is no benefit to switching. More on that later.
 If the host is allowed to do whatever he wants with his knowledge of what's behind the doors, then all bets are off.
 The problem as stated above doesn't fully specify the behavior of the host, so it is technically ambiguous. 
-But I think most people do tend assume that the host always opens a door with a goat behind it, and the confusion does not result from misunderstanding the problem.
+But I think most people do tend to assume that the host always opens a door with a goat behind it, and the confusion does not result from misunderstanding the problem.
 Rather, the problem has an interesting causal structure that tends to violate most people's causal intuition.
 
 ## An Introduction to Causal Diagrams
