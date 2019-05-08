@@ -4,8 +4,9 @@ title: About
 permalink: /about/
 ---
 
-I'm Jonathan Dorsey, a statistics graduate student at the University of Akron. 
-Currently I'm working on my master's thesis and looking for work as a data scientist or analyst.
+Hi, I'm Jonathan Dorsey.
+I've just completed my master's degree in statistics at the University of Akron.
+Currently I'm looking for work as a data scientist, analyst, or statistician.
 I went to Case Western Reserve University as an undergraduate and majored in math.
 
 I'm always learning more about math, statistics, and programming. 
