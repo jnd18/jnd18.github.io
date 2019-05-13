@@ -42,7 +42,7 @@ but I do find the RVM more elegant in certain ways.
 
 Similarly to the situation with Gaussian processes and relevance vector machines, the Dirichlet process clustering model has a complexity parameter
  ($\alpha$ controls the number of clusters indirectly) that we can account for almost automatically.
-I mention this only indirectly in the talk, but it's possible to place a general-enough prior on $alpha$
+I mention this only indirectly in the talk, but it's possible to place a general-enough prior on $\alpha$
  and then just let the machinery of Bayesian inference do its thing without us ever having to decide how many clusters we think there should be.
 As with the RVM to SVM comparison, this doesn't necessarily make Dirichlet process clustering the best clustering method,
 but I do find this approach very elegant and principled.
