@@ -4,7 +4,7 @@ title: Cleaning and Exploring Mountain Project Climbing Data
 ---
 
 I've just put up a new Jupyter Notebook that shows off some basic data cleaning using Python and Pandas.
-You can view on my GitHub [here.](https://github.com/jnd18/mountain-project-eda/blob/master/rrg-and-nrg.ipynb)
+You can view it on my GitHub [here.](https://github.com/jnd18/mountain-project-eda/blob/master/rrg-and-nrg.ipynb)
 Here's a brief description from the intro of the notebook:
 >Mountain Project is an online climbing guidebook for hundreds of thousands of routes all around the world.
 >One of its cool features is a route finder that will create a table of routes based on certain parameters you give it, such as location and difficulty.
