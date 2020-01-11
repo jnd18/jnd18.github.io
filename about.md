@@ -5,12 +5,11 @@ permalink: /about/
 ---
 
 Hi, I'm Jonathan Dorsey.
-I've just completed my master's degree in statistics at the University of Akron.
-Currently I'm looking for work as a data scientist, analyst, or statistician.
-I went to Case Western Reserve University as an undergraduate and majored in math.
+This is where I write about some of my interests, mostly in programming and statistics.
+I'm also interested in pure math (e.g. category theory), but I haven't put much of that here yet.
 
-I'm always learning more about math, statistics, and programming. 
-And of course, [I'm interested in most phases of data processing.](https://youtu.be/0bomkgXeDkE?t=213)
+I'm always learning more about math, statistics, and programming, 
+and of course, [I'm interested in most phases of data processing.](https://youtu.be/0bomkgXeDkE?t=213)
 
 When I'm not reading or coding, I enjoy rock climbing.
 
